@@ -32,3 +32,92 @@ button{
     }
 
 }
+.statues{
+    display:flex;
+     margin-left: auto;
+    margin-right: auto;
+    text-align: center;
+    flex-direction: row;
+    justify-content: space-between;
+    margin-top:1%;
+    background-color: aqua;
+     min-height: 100px;
+    width: 40%;
+    h2{
+        font-size: 3rem;
+        padding-left: 15px;
+        font-family: 'Gill Sans', 'Gill Sans MT', Calibri, 'Trebuchet MS', sans-serif;
+    }
+}
+
+.ListBtns {
+  list-style: none; /* remove bullet points */
+  /* remove default padding */
+   /* remove default margin */
+}
+
+.ListBtns li {
+  display: inline-block; /* make list items display in a line */
+}
+
+.statBtns {
+  margin-right: 30px;
+  width: 250px;
+  height: 100px;
+  font-size: 3rem;
+  border-radius: 35px;
+  border:none;
+  background-color: hsl(226, 25%, 17%);
+  color:rgba(255, 255, 255, 0.836)
+ 
+}
+.statBtns:hover{
+      background-color: hsl(226, 25%, 27%);
+}
+.container{
+     display:flex;
+     margin-left: auto;
+    margin-right: auto;
+    text-align: center;
+    flex-direction: row;
+    flex-wrap: wrap;
+    margin-top:1%;
+    background-color: aqua;
+     min-height: 1500px;
+    width: 40%;
+}
+.card{
+  
+    width: 500px;
+    height: 400px;
+    background-color: chartreuse;
+}
+.left-sec{
+    display: flex;
+    justify-content: space-between;
+    flex-direction: column;
+    gap: 100px;
+    img{
+        height: 150px;
+        padding: 10px;
+        margin-right: auto;
+        
+    }
+    button{
+        margin-top: auto;
+        font-size: 2rem;
+        width: 180px;
+        height: 80px;
+        border-radius: 35px;
+        border:none;
+        background-color: hsl(226, 25%, 17%);
+        margin-left: 8px;
+    
+    
+    }
+  
+
+    
+}
+
+
