@@ -4,7 +4,7 @@ const left = document.querySelector(".left-sec");
 const right = document.querySelector(".right-sec");
 async function getData(){
     try{
-        const response = await fetch("assest/data/data.json");
+        const response = await fetch("assests/data/data.json");
         const data = await response.json();
         return data;
     } catch(err){
@@ -27,8 +27,8 @@ async function getAll(){
        newCard.appendChild(newLeft);
        newCard.appendChild(newRight)
        const newImg = document.createElement("img")
-       let log = el.logo
-       newImg.src= log.substring(1)
+       let log = el.logo;
+       newImg.src= log.substring(2);
 
        const newBtn = document.createElement("button")
        newBtn.classList.add("statBtns")
