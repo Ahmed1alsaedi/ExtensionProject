@@ -4,6 +4,7 @@ const container = document.querySelector(".container");
 const card = document.querySelector(".card");
 const left = document.querySelector(".left-sec");
 const right = document.querySelector(".right-sec");
+const buttons = document.querySelectorAll(".statBtns");
 async function getData(){
     try{
         const response = await fetch("assets/data/data.json");
@@ -16,6 +17,8 @@ async function getData(){
 
 
 async function getAll(){
+  
+
     try{
         container.innerHTML="";
     const data = await getData();
@@ -40,6 +43,10 @@ async function getAll(){
        newBtn.textContent = "Remove"
        newLeft.appendChild(newImg);
        newLeft.appendChild(newBtn);
+         newBtn.addEventListener("click", () => {
+        container.removeChild(newCard);
+          container.style.minHeight = "600px"
+       });
        const newH2 = document.createElement("h2")
        newH2.textContent = el.name;
        const newP = document.createElement("p")
@@ -89,6 +96,7 @@ async function getActive(){
        newBtn.textContent = "Remove"
        newBtn.addEventListener("click", () => {
         container.removeChild(newCard);
+          container.style.minHeight = "600px"
        });
        newLeft.appendChild(newImg);
        newLeft.appendChild(newBtn);
@@ -118,6 +126,8 @@ async function getActive(){
 async function getInActive(){
     try{
        container.innerHTML="";
+       container.style.minHeight = "500px";
+
         const data = await getData();
        const inActive =  data.filter(el => el.isActive === false);
         inActive.forEach(el =>{
@@ -141,6 +151,7 @@ async function getInActive(){
        newBtn.textContent = "Remove"
        newBtn.addEventListener("click", () => {
         container.removeChild(newCard);
+        container.style.minHeight = "600px"
        });
        newLeft.appendChild(newImg);
        newLeft.appendChild(newBtn);
@@ -165,3 +176,12 @@ async function getInActive(){
         console.log(err);
     }
 }
+ // Add event listener to each button
+  buttons.forEach(button => {
+     button.addEventListener('click', () => {
+    // Remove highlight from all buttons
+       buttons.forEach(btn => btn.classList.remove('highlighted'));
+    // Highlight the clicked button
+      button.classList.add('highlighted');
+  });
+});
