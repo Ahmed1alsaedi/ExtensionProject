@@ -5,6 +5,7 @@ const card = document.querySelector(".card");
 const left = document.querySelector(".left-sec");
 const right = document.querySelector(".right-sec");
 const buttons = document.querySelectorAll(".statBtns");
+const mode = document.getElementById("mode");
 async function getData(){
     try{
         const response = await fetch("assets/data/data.json");
@@ -185,3 +186,16 @@ async function getInActive(){
       button.classList.add('highlighted');
   });
 });
+mode.addEventListener("click", () => {
+
+       if(!document.body.classList.contains("light")){
+        document.body.classList.add("light");
+        mode.innerHTML = `<img src="assets/images/images/icon-moon.svg" alt="settings" id="modImg">`;
+       }
+       else{
+        document.body.classList.remove("light");
+        mode.innerHTML = `<img src="assets/images/images/icon-sun.svg" alt="settings" id="modImg">`;
+       }
+}
+)
+

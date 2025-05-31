@@ -1,7 +1,56 @@
 body{
     width: 100%;
-    background: linear-gradient(#010517, #010c3d);
+      background: linear-gradient(#010517, #010c3d);
 }
+body.light{
+    background:linear-gradient(180deg, #EBF2FC 0%, #EEF8F9 100%);
+      .headerContainer{
+        background-color: hsl(200, 60%, 99%);
+    }
+    #mode{
+        background-color: hsl(0, 0%, 93%);
+    }
+    .statBtns{
+        background-color: hsl(200, 60%, 99%);
+        color: hsl(228, 24%, 20%);
+        font-weight: bold;
+    }
+    .statBtns:hover{
+        background-color: hsl(200, 60%, 119%);
+      
+    }
+    .statues{
+        h2{
+            color: #000;
+        }
+    }
+    .card{
+        background-color: hsl(200, 60%, 99%);
+    }
+    .left-sec{
+        button{
+              background-color: hsl(200, 60%, 99%);
+              color: hsl(228, 24%, 20%);
+               
+               border: 0.1px solid hsl(0, 0%, 0%);
+               
+        }
+    }
+    .right-sec{
+        h2{
+            color: #000;
+        }
+        p{
+            color: #000;
+        }
+    }
+    .slider{
+        background-color: hsl(217, 61%, 90%);
+    }
+
+    
+}
+
 .headerContainer{
     display: flex;
    
@@ -79,14 +128,16 @@ button:hover{
   border-radius: 35px;
   border:none;
   background-color: hsl(226, 25%, 17%);
-  color:rgba(255, 255, 255, 0.836)
+  color:rgba(255, 255, 255, 0.836);
+  font-weight: bold;
  
 }
 .statBtns:hover{
       background-color: hsl(226, 25%, 27%);
 }
 .statBtns.highlighted {
-  background-color: hsl(3, 86%, 64%) !important; /* highlighted color */
+  background-color: hsl(3, 86%, 64%) !important;
+   color: #000;
 }
 .container{
    display:flex;
@@ -139,6 +190,8 @@ button:hover{
         background-color:  hsl(226, 25%, 13%);
         margin-left: 10px;
         margin-bottom: 20px;
+        border:0.1px solid #595959;
+        
     
     
     }
@@ -190,8 +243,8 @@ button:hover{
     
 }
 .switch {
- --secondary-container: #3a4b39;
- --primary: hsl(122, 29%, 48%);
+ --secondary-container: hsl(3, 86%, 64%);
+ --primary:hsl(3, 77%, 44%);
  font-size: 17px;
  position: relative;
  display: inline-block;
